@@ -3,7 +3,7 @@
 - 在 golang 中，list 是一种自定类型，可以被定义为：
 
 ```goalng
-	type ListNode struct {
+type ListNode struct {
         Val  int
         Next *ListNode
 	}
@@ -12,7 +12,7 @@
 之前一直有一个疑问:
 
 ```golang
-	type ListNode struct {
+type ListNode struct {
         Val  int
         Next *ListNode
     }
@@ -45,7 +45,7 @@ output：
 但事与愿违，
 
 ```golang
-		tmp := c
+	tmp := c
         tmp.Next = a
         for tmp != nil && c != nil {
             fmt.Println(tmp.Val, "\t", c.Val)
@@ -62,7 +62,7 @@ output：
 显然，和我的猜想不符，那么就思考一下，赋值，应该是让两个变量的值相同，那么地址不同就可以理解了，同时 ( *ListNode )c 的  c.Next， 其实也是其值的一部分。理应 `c.Next == tmp.Next` 。
 
 ```golang
-		tmp := c
+	tmp := c
         tmp.Next = a
         fmt.Println(&c.Next,"\t",&tmp.Next)
 ```
