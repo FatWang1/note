@@ -1,4 +1,4 @@
-# List & Pointer
+# Link List & Pointer
 
 - 在 golang 中，list 是一种自定类型，可以被定义为：
 
